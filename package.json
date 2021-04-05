@@ -1,6 +1,6 @@
 {
   "name": "framer-motion-hooks",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Fill the hook gap in Framer Motion",
   "author": "Matthias Halfmann",
   "repository": "matthiaaas/framer-motion-hooks",
@@ -39,5 +39,9 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "framer-motion": "^4.1.2",
+    "react-intersection-observer": "^8.31.0"
+  }
 }
