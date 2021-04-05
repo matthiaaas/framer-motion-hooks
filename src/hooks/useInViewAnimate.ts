@@ -17,7 +17,7 @@ interface IStates {
  */
 export const useInViewAnimate = (
   { initial, animate }: IStates,
-  options?: IntersectionOptions
+  options: IntersectionOptions = {}
 ) => {
   const animation = useAnimation()
 
@@ -28,7 +28,11 @@ export const useInViewAnimate = (
   }, [])
 
   useEffect(() => {
-    if (inView) animation.start(animate)
+    if (inView) {
+      animation.start(animate)
+    } else if (initial && options.triggerOnce === false) {
+      animation.start(initial)
+    }
   }, [inView])
 
   return { inViewRef, animation }
