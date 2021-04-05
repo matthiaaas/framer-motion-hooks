@@ -1,0 +1,6 @@
+dist
+.gitattributes
+.gitignore
+.prettierrc
+rollup.config.js
+tsconfig.json
