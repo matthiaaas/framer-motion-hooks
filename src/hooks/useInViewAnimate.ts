@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { Target, useAnimation, VariantLabels } from "framer-motion"
-import { useInView } from "react-intersection-observer"
+import { IntersectionOptions, useInView } from "react-intersection-observer"
 
 interface IStates {
   initial?: VariantLabels | Target
@@ -15,10 +15,13 @@ interface IStates {
  * @returns inViewRef
  * @returns animationControls
  */
-export const useInViewAnimate = ({ initial, animate }: IStates) => {
+export const useInViewAnimate = (
+  { initial, animate }: IStates,
+  options?: IntersectionOptions
+) => {
   const animation = useAnimation()
 
-  const [inViewRef, inView] = useInView()
+  const [inViewRef, inView] = useInView(options)
 
   useEffect(() => {
     if (initial) animation.set(initial)
