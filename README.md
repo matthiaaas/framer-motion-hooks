@@ -24,6 +24,14 @@ const MyComponent = () => {
 }
 ```
 
+#### API
+
+`const scrollProgress = useInViewScroll(ref, options)`
+
+- `scrollProgress`: A number between 0 and 1
+- `ref`: React ref target element
+- `options`: _(optional)_ Scroll options (e.g. threshold)
+
 ### `useInViewAnimate`
 
 Fires an animation as soon as the element is visible in viewport.
@@ -47,6 +55,15 @@ const variants = {
 
 _Note_: Also works with direct props on the React element
 
+#### API
+
+`const { inViewRef, animation } = useInViewAnimate(variants, options)`
+
+- `inViewRef`: React ref
+- `animation`: Motion animation controls
+- `variants`: Motion target object
+- `options`: _(optional)_ Intersection options
+
 ### `useMotionAsState`
 
 Returns a React state value that updates when the MotionValue changes
@@ -60,3 +77,10 @@ const MyComponent = () => {
   return <span>{reactState}</span>
 }
 ```
+
+#### API
+
+`const state = useMotionAsState(value)`
+
+- `state`: React state
+- `value`: Motion value
