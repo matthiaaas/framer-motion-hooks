@@ -18,9 +18,11 @@ Returns a `MotionValue` representing the y scroll progress that updates when the
 
 ```jsx
 const MyComponent = () => {
-  const progress = useInViewScroll(wrapperRef)
+  const ref = useRef()
 
-  return <motion.div style={{ scale: progress }} />
+  const progress = useInViewScroll(ref)
+
+  return <motion.div ref={ref} style={{ scale: progress }} />
 }
 ```
 
