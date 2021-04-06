@@ -84,3 +84,24 @@ const MyComponent = () => {
 
 - `state`: React state
 - `value`: Motion value
+
+### `useStateAsMotion`
+
+Returns a MotionValue value that updates when the React state changes
+
+```jsx
+const MyComponent = () => {
+  const [opacity, setOpacity] = useState(0)
+
+  const motionOpacity = useStateAsMotion(opacity)
+
+  return <motion.div style={{ opacity: motionOpacity }} />
+}
+```
+
+#### API
+
+`const value = useStateAsMotion(state)`
+
+- `value`: Motion value
+- `state`: React state

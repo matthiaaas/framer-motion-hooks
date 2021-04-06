@@ -1,1 +1,6 @@
-export { useInViewAnimate, useInViewScroll, useMotionAsState } from "./hooks"
+export {
+  useInViewAnimate,
+  useInViewScroll,
+  useMotionAsState,
+  useStateAsMotion
+} from "./hooks"
