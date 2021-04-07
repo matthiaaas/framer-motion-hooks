@@ -12,7 +12,7 @@ _Note_: If you prefer `yarn` instead of `npm`, just use `yarn add framer-motion-
 
 ## Hooks
 
-### `useInViewScroll`
+### [`useInViewScroll`](docs/useInViewScroll.md)
 
 Returns a `MotionValue` representing the y scroll progress that updates when the target element is visible in viewport.
 
@@ -26,6 +26,8 @@ const MyComponent = () => {
 }
 ```
 
+[Comprehensive example →](docs/useInViewScroll.md)
+
 #### API
 
 `const scrollProgress = useInViewScroll(ref, options)`
@@ -34,7 +36,7 @@ const MyComponent = () => {
 - `ref`: React ref target element
 - `options`: _(optional)_ Scroll options (e.g. threshold)
 
-### `useInViewAnimate`
+### [`useInViewAnimate`](docs/useInViewAnimate.md)
 
 Fires an animation as soon as the element is visible in viewport.
 
@@ -55,6 +57,8 @@ const variants = {
 }
 ```
 
+[Comprehensive example →](docs/useInViewAnimate.md)
+
 _Note_: Also works with direct props on the React element
 
 #### API
@@ -66,7 +70,7 @@ _Note_: Also works with direct props on the React element
 - `variants`: Motion target object
 - `options`: _(optional)_ Intersection options
 
-### `useMotionAsState`
+### [`useMotionAsState`](docs/useMotionAsState.md)
 
 Returns a React state value that updates when the MotionValue changes
 
@@ -87,7 +91,7 @@ const MyComponent = () => {
 - `state`: React state
 - `value`: Motion value
 
-### `useStateAsMotion`
+### [`useStateAsMotion`](docs/useStateAsMotion.md)
 
 Returns a MotionValue value that updates when the React state changes
 
