@@ -14,5 +14,10 @@ export default {
     }
   ],
   plugins: [typescript({ objectHashIgnoreUnknownHack: true })],
-  external: ["react", "react-dom", "framer-motion"]
+  external: [
+    "react",
+    "react-dom",
+    "framer-motion",
+    "react-intersection-observer"
+  ]
 }
