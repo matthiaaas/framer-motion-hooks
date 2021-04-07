@@ -1,6 +1,6 @@
 # `useInViewAnimate`
 
-## Example
+## Basic Example
 
 ```jsx
 import { motion } from "framer-motion"
@@ -34,4 +34,29 @@ const variants = {
     }
   }
 }
+```
+
+## Example with Options
+
+The `useInViewAnimate` hook relies on [react-intersection-observer](https://github.com/thebuilder/react-intersection-observer) under the hood.Therefore it accepts all options mentioned in the package's README including `threshold`, `delay`, `initialInView`, `triggerOnce` and many more. A complete list can be found [here](https://www.npmjs.com/package/react-intersection-observer#options).
+
+```jsx
+import { motion } from "framer-motion"
+import { useInViewAnimate } from "framer-motion-hooks"
+
+export function MyComponent() {
+  const { inViewRef, animation } = useInViewAnimate(
+    {
+      animate: "visible"
+    },
+    {
+      threshold: 200,
+      triggerOnce: false // set it explicitly to false to get the expected result
+    }
+  )
+
+  return ...
+}
+
+const variants = ...
 ```

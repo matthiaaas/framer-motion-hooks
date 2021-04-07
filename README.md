@@ -42,16 +42,23 @@ Fires an animation as soon as the element is visible in viewport.
 
 ```jsx
 const MyComponent = () => {
-  const { inViewRef, animation } = useInViewAnimate(variants)
+  const { inViewRef, animation } = useInViewAnimate({ animate: "visible" })
 
-  return <motion.div ref={inViewRef} animate={animation} />
+  return (
+    <motion.div
+      ref={inViewRef}
+      initial="initial"
+      animate={animation}
+      variants={variants}
+    />
+  )
 }
 
 const variants = {
   initial: {
     x: 0
   },
-  animate: {
+  visible: {
     x: 200
   }
 }
