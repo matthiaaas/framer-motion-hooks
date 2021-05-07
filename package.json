@@ -19,7 +19,7 @@
     "framer-motion",
     "typescript"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "peerDependencies": {
     "framer-motion": "^4.1.2",
     "react": "^17.0.1",
