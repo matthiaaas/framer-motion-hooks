@@ -25,7 +25,7 @@ export const useInViewScroll = (
 
       const threshold = options.threshold || 0
 
-      const elPosY = node.offsetTop
+      const elPosY = node.getBoundingClientRect().top + scrollY.get()
       const elHeight = node.scrollHeight
 
       const viewIntersect = Math.max(elPosY - window.innerHeight, 0)
