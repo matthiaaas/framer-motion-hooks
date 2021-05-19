@@ -1,6 +1,6 @@
 {
   "name": "framer-motion-hooks",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Fill the hook gap in Framer Motion",
   "author": "Matthias Halfmann",
   "repository": "matthiaaas/framer-motion-hooks",
@@ -17,6 +17,10 @@
     "framer",
     "motion",
     "framer-motion",
+    "in-view",
+    "viewport",
+    "scroll",
+    "state",
     "typescript"
   ],
   "license": "MIT",
