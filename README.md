@@ -32,7 +32,7 @@ const MyComponent = () => {
 
 `const scrollProgress = useInViewScroll(ref, options)`
 
-- `scrollProgress`: A number between 0 and 1
+- `scrollProgress`: A number between 0 and 1 indicating relative page scroll
 - `ref`: React ref target element
 - `options`: _(optional)_ Scroll options (e.g. threshold)
 
