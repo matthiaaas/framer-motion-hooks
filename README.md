@@ -8,7 +8,7 @@ Fill the hook gap in Framer Motion.
 npm install framer-motion-hooks
 ```
 
-_Note_: If you prefer `yarn` instead of `npm`, just use `yarn add framer-motion-hooks`.
+**Note:** If you prefer `yarn` instead of `npm`, just use `yarn add framer-motion-hooks`.
 
 ## Hooks
 
@@ -36,7 +36,9 @@ const MyComponent = () => {
 - `ref`: React ref target element
 - `options`: _(optional)_ Scroll options (e.g. threshold)
 
-### [`useInViewAnimate`](docs/useInViewAnimate.md)
+### [`useInViewAnimate`](docs/useInViewAnimate.md) *Deprecated*
+
+**Note:** Deprecated in favor of Framer Motion's native [`whileInView`](https://www.framer.com/docs/gestures/#viewport) prop introduced in version 5.3.
 
 Fires an animation as soon as the element is visible in viewport.
 
@@ -66,7 +68,7 @@ const variants = {
 
 [Comprehensive example →](docs/useInViewAnimate.md)
 
-_Note_: Also works with direct props on the React element
+**Note**: Also works with direct props on the React element
 
 #### API
 
