@@ -39,10 +39,11 @@ export const useInViewScroll = (
       }
     }
 
+    handleScrollProgress()
     const unsubscribeFromScroll = scrollY.onChange(handleScrollProgress)
 
     return () => unsubscribeFromScroll()
-  }, [])
+  }, [el, options])
 
   return progress
 }
